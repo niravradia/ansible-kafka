@@ -2,8 +2,8 @@
 - include: stop.yml
   when: run_mode == 'Stop'
 
-- include: install.yml
-  when: not skip_install and ( run_mode == 'Install' or run_mode == 'Deploy' )
+#- include: install.yml
+#  when: not skip_install and ( run_mode == 'Install' or run_mode == 'Deploy' )
 
 - include: configure.yml
   when: run_mode == 'Configure' or run_mode == 'Deploy'
